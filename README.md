@@ -1,32 +1,12 @@
-## How to contribute
+Source path can refer to a SceneObj's directoy or to a parent directory that contains multiple SceneObj folders.
 
-Any coder who has no current task can take any free Issue to work on. Check the priorities and assigned milestones before taking an Issue.
+Output path should be a parent folder as it will create a sub folder for the scene's terrain edit data
 
-We are following the principle of **Feature-Branching** meaning every Issue is getting their own branch. Branches are created from our master branch and are being merged back into the master branch as soon as the relating Isse has been resolved. 
+Use the exe and it will prompt you for the paths or run it via the cmd line and you can pass the paths are arguments.
 
-**Make sure you are not commiting directly onto the master branch**.
-
-Please name your branch the same as the corresponding Issue.
-
-Remember to link your pull-requests to the corresponding Issues to make tracking development easier.
-Also it is good practice to get another team member to do a code review before you merge your branch into master.
-
-## Progress
-
-Most recent version: **1.0**
+Example:
 ```
-Game Versions: v1.2.x
-- Nothing yet
+Terrain.exe C:\Users\Admin\Desktop\SourceFolder C:\Users\Admin\Desktop\OutputFolder
 ```
 
-See [Changelog](changelog.txt) for more changes
-
-## Acknowledgement
-
-Please see [Credits](CREDITS) for the full list of contributors and/or other factors.
-
-[Diplomacy](https://github.com/DiplomacyTeam/Bannerlord.Diplomacy) was used as the base for this mod but we've stripped all the features out and only kept the config, utils and helpers.
-
-## License
-
-License: [MIT License](LICENSE)
+Probably best not to do a lot of scenes at once, as they can get pretty bloated.
