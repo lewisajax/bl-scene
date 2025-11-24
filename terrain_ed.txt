@@ -1,0 +1,59 @@
+terrain_ed
+--------------------------------------
+
+terrain_1
+
+ProcMon Write Events:
+Offset: 0, Length: 119
+
+For first call to terrain_ed:
+17	TaleWorlds.Native.dll	create_game_application + 0x28bf58	0x7ff98e383308
+18	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4f1544	0x7ff98dc10764
+19	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4ee1e4	0x7ff98dc0d404
+20	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x31ccf1	0x7ff98da3bf11
+21	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbfac	0x7ff98e3c9c2c
+22	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e327	0x7ff98da8d547
+23	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e1f8	0x7ff98da8d418
+24	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36f427	0x7ff98da8e647
+
+ProcMon Read Events
+Offset: 0, Length: 4
+Offset: 4, Length: 8
+Offset: 12, Length: 107
+
+11	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4efe62	0x7ff961ebf082	
+12	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x5d872e	0x7ff961fa794e	
+13	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4f5bfe	0x7ff961ec4e1e	
+14	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x2835b7	0x7ff961c527d7	
+15	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x2a6236	0x7ff961c75456	
+16	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e698	0x7ff961d3d8b8	
+17	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x2abb72	0x7ff961c7ad92	
+18	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e698	0x7ff961d3d8b8	
+19	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x28a8f	0x7ff9619f7caf	
+20	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x2ac8fb	0x7ff961c7bb1b	
+21	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x27da11	0x7ff961c4cc31	
+22	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x731a11	0x7ff962100c31	
+23	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x7334ad	0x7ff9621026cd	
+24	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbf946	0x7ff96272d5c6	
+25	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x7d3cd1	0x7ff9621a2ef1	
+26	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x7e7a16	0x7ff9621b6c36	
+
+--------------------
+
+skirmish_002f
+
+Offset: 0, Length: 4096
+Offset: 4096, Length: 16977920
+Offset: 16777216, Length: 204800 # Offset is lower than previous call's length 200704 + 4096 = 204800 + 16777216 = 16977920
+Offset: 16982016, Length: 325
+
+19	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4f153b	0x7ff98dc1075b
+20	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4ee1e4	0x7ff98dc0d404
+21	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x31ccf1	0x7ff98da3bf11
+22	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbfac	0x7ff98e3c9c2c
+23	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e327	0x7ff98da8d547
+24	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e1f8	0x7ff98da8d418
+25	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36f427	0x7ff98da8e647
+
+--------------------------------------
+

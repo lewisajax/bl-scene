@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Terrain/bin/Debug/net6.0/Terrain.dll",
+            "args": [
+                "C:\\Users\\Lewis\\OneDrive\\Desktop\\TestScenes",
+                "C:\\Users\\Lewis\\OneDrive\\Desktop\\OutputScenes"
+            ],
+            "cwd": "${workspaceFolder}/src/Terrain",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}

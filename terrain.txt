@@ -1,0 +1,98 @@
+terrain.bin
+--------------------------------------
+
+Magic Number, ZGR6/0x5A475236
+FourCC, Always RTRN/0x5254524E
+
+When saving terrain_1
+
+ProcMon Write Events:
+Offset: 0, Length: 4 = Magic
+Offset: 4, Length: 108 = Headers
+Offset: 112, Length: 188 =  MIDX Chunk
+Offset: 300, Length: 4 = Node Offsets
+Offset: 304, Length: 141 = HGHT Chunk
+Offset: 445, Length: 4 = Node Offsets
+Offset: 449, Length: 144 = NRML Chunk
+Offset: 593, Length: 4 = Node Offsets
+Offset: 597, Length: 148 = WGHT Chunk
+Offset: 745, Length: 4 = Node Offsets
+Offset: 749, Length: 71 = PHYM Chunk
+
+Win64_Shipping_wEditor\TaleWorlds.Native.dll
+
+11	TaleWorlds.Native.dll	create_game_application + 0x2a87f5	0x7ff95e27fba5
+12	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4edcc5	0x7ff95daecee5
+13	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x31ccf1	0x7ff95d91bf11
+14	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbfac	0x7ff95e2a9c2c
+15	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e327	0x7ff95d96d547
+16	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e1f8	0x7ff95d96d418
+17	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36f427	0x7ff95d96e647
+
+-------- Reloading game and saving again
+
+11	TaleWorlds.Native.dll	create_game_application + 0x2a87f5	0x7ff95db2fba5
+12	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4edcc5	0x7ff95d39cee5
+13	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x31ccf1	0x7ff95d1cbf11
+14	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbfac	0x7ff95db59c2c
+15	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e327	0x7ff95d21d547
+16	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e1f8	0x7ff95d21d418
+17	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36f427	0x7ff95d21e647
+
+When saving skirmish_002f
+
+Offset: 0, Length: 4 = Magic
+Offset: 4, Length: 108 = Headers
+Offset: 112, Length: 5128 =  MIDX Chunk
+Offset: 5240, Length: 400 = Node Offsets
+Offset: 5640, Length: 186957 = HGHT Chunk
+Offset: 192597, Length: 400 = Node Offsets
+Offset: 192997, Length: 419 = NRML Chunk
+Offset: 193416, Length: 400 = Node Offsets
+Offset: 193816, Length: 482826 = WGHT Chunk
+Offset: 676642, Length: 400 = Node Offsets
+Offset: 677042, Length: 31270 = PHYM Chunk
+
+11	TaleWorlds.Native.dll	create_game_application + 0x2a87f5	0x7ff95df1fba5
+12	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x4edcc5	0x7ff95d78cee5
+13	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x31ccf1	0x7ff95d5bbf11
+14	TaleWorlds.Native.dll	get_ftdn_managed_interface + 0xbfac	0x7ff95df49c2c
+15	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e327	0x7ff95d60d547
+16	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36e1f8	0x7ff95d60d418
+17	TaleWorlds.Native.dll	WotsMainNativeCoreCLR + 0x36f427	0x7ff95d60e647
+
+--------------------------------------
+
+Terrain_1
+MIDX: 112, 188, 2360
+HGHT: 300, 141, 100
+NRML: 445, 144, 102
+WGHT: 593, 148, 157
+PHYM: 745, 71, 132
+
+Terrain_2
+MIDX: 112, 199, 2872
+HGHT: 311, 150, 200
+NRML: 469, 153, 204
+WGHT: 630, 152, 314
+PHYM: 790, 75, 264
+
+Terrain_Skirm_002F
+MIDX: 112, 5128, 60228
+HGHT: 5240, 186957, 210143
+NRML: 192597, 419, 37712
+WGHT: 193416, 482826, 552161
+PHYM: 676642, 31270, 7450128
+
+Terrain_1 Offsets
+MIDX: 299-144=155+32=188
+HGHT: 444-336=108+32=140+1(sByte)
+NRML: 592-481=111+32=143+1
+WGHT: 744-629=115+32=147+1
+PHYM: 815-781=38+32=70+1
+
+32 being the position after we declare MIDX's header values
+
+[Chunk Offset], [PNG Offset + 32], [Maybe Decomp Size]
+
+--------------------------------------

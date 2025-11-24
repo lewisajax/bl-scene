@@ -1,0 +1,44 @@
+ref.x86asm.net/coder32.html
+
+C:\Develop\MB3\Source\Engine\Rgl\rglTerrain_editable.cpp
+
+C:\Develop\MB3\Source\Engine\Rgl\rglTerrain_map.cpp
+
+C:\Develop\MB3\Source\Engine\Rgl\rglTerrain_node.cpp
+- weightmap_image->header.format == rgl_surff_R8_UNORM || weightmap_image->header.format == rgl_surff_A8_UNORM'
+
+C:\Develop\MB3\Source\Engine\Rgl\scene_object_manager.cpp
+
+C:\Develop\MB3\Source\Engine\Rgl\rglImage_compiler_nvtt.cpp
+- ISPC compressor for textures
+- NVTT compressor for textures
+
+"C:\\Develop\\MB3\\Source\\Engine\\Rgl\\rglCompression_utils.cpp"
+"C:\\Develop\\MB3\\TaleWorlds.Shared\\Source\\Base\\FairyTale.Library\\bit_buffer/ftlCompression_infos.h"
+
+CRC32
+https://www.fileformat.info/tool/hash.htm
+
+There's an ancillary chunk in each of the embedded PNGs (pHYs)
+https://www.w3.org/TR/PNG-Chunks.html
+
+https://github.com/libyal/assorted/blob/main/documentation/Deflate%20(zlib)%20compressed%20data%20format.asciidoc
+
+L16_UNORM and R32F might also be used for the terrain's texture maps
+
+All the values have lost some precision. It's kind of noticeable but you'd have to be looking. terrain.bin only uses lz4 and zlib so there shouldnt be any data loss.
+But there might be different tolerances when saving the values from the editor. Since they are fitting it into 16bit textures or byte values.
+If so though, why would they have 2 different value sets between their terrain.bin and their terrain_ed.
+Most likely case is that I'm doing something wrong when reading/converting the values. Or both.
+
+Material weights have some slots that contain strings with values and such. 
+Not sure where to start with that.
+I'm probably doing material weights wrong here
+TW could be reusing empty material slots to add data for prefabs and other shit. Since they all fit into the same amount of bytes as the normal mat weights
+It could just be stuff that's in the .xscene or the prefab folder and it might be unecessary for us to work it in.
+But we could very well be missing data if we don't parse it correctly.
+Or all that extra data might be ommitted when saving to terrain.bin. If that's the case then we have nothing to worry.
+
+Need to have a look at normals since I'm doing them wrong. However, it doesn't seem like the editor cares if the normals are broken in the terrain_ed.
+So I've just left them in that state for the time being.
+
