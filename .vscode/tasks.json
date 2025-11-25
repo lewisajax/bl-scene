@@ -1,13 +1,41 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "dotnet",
-			"task": "build ${workspaceFolder}\\src\\Terrain\\Terrain.csproj",
-			"file": "${workspaceFolder}\\src\\Terrain\\Terrain.csproj",
-			"group": "build",
-			"problemMatcher": [],
-			"label": "dotnet: build ${workspaceFolder}\\src\\Terrain\\Terrain.csproj"
-		}
-	]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Scene.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Scene.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/Scene.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
 }

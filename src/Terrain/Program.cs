@@ -69,7 +69,7 @@ public class Program
     {
         string dirName = "";
         bool hasDir = false;
-        Console.WriteLine($"Input the {name} folder:");
+        Console.WriteLine($"Input the {name} folder path:");
         while (hasDir == false)
         {
             string? input = Console.ReadLine();

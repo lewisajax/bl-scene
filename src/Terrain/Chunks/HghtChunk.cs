@@ -119,7 +119,17 @@ public class HghtChunk : TerrainChunk
 
                 float val = subReader.ReadUInt16();
                 float norm = UNORM.Decode16((uint)val); // Handles edge cases
-                val = ((Math.Abs(max) + Math.Abs(min)) * norm) - Math.Abs(min);
+
+                if (min > 0)
+                {
+                    // Feels like a hacky way to go about this
+                    val = ((Math.Abs(max) - Math.Abs(min)) * norm);
+                    if (min > 0) val += Math.Abs(min);
+                }
+                else
+                {
+                    val = ((Math.Abs(max) + Math.Abs(min)) * norm) - Math.Abs(min);
+                }
 
                 // We lose the same amount of precision as if we were just getting the percentage
                 // values.Add(min + ((val - 0) * (max - min) / ((1 << bitmapSource.Format.BitsPerPixel) - 1 - 0)));
